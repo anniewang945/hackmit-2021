@@ -7,7 +7,7 @@ import { get, post } from "../../utilities";
 
 import "./CreateWorkoutPage.css";
 
-class Home extends Component {
+class WorkoutForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -54,7 +54,7 @@ class Home extends Component {
                             people: this.state.people,
                             time: this.state.time.toDateString(),
                             duration: this.state.duration,
-                            workoutType: this.state.workoutType,
+                            workoutType: this.state.type,
                             location: this.state.location
         });
         console.log(this.state);
@@ -100,6 +100,6 @@ class Home extends Component {
     }
 }
 
-export default Home;
+export default WorkoutForm;
 
 
