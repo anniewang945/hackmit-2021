@@ -68,8 +68,8 @@ class Home extends Component {
                     <div className="CreateWorkoutPage-title"> Create A Workout </div>
                     <br />
                     <form>
-                        <div className="CreateWorkoutPage-label"> Title: </div>
-                        <input type="text" name="name" onChange={this.handleTitleChange} />
+                        <div className="CreateWorkoutPage-label"> Title*: </div>
+                        <input type="text" name="name" onChange={this.handleTitleChange} required />
 
                         <div className="CreateWorkoutPage-label"> Description: </div>
                         <textarea name="description" onChange={this.handleDescriptionChange} />
@@ -77,11 +77,11 @@ class Home extends Component {
                         <div className="CreateWorkoutPage-label"> Workout Type: </div>
                         <input type="text" name="workout-type" onChange={this.handleTypeChange} />
 
-                        <div className="CreateWorkoutPage-label"> Time: </div>
+                        <div className="CreateWorkoutPage-label"> Time*: </div>
                         <DatePicker showTimeSelect selected={this.state.time} onChange={this.handleTimeChange} dateFormat="MMM d, yyyy h:mm aa" />
 
-                        <div className="CreateWorkoutPage-label"> Duration (hours): </div>
-                        <input type="text" name="duration" onChange={this.handleDurationChange} />
+                        <div className="CreateWorkoutPage-label"> Duration* (hours): </div>
+                        <input type="text" name="duration" onChange={this.handleDurationChange} required />
 
                         <div className="CreateWorkoutPage-label"> Location: </div>
                         <input type="text" name="location" onChange={this.handleLocationChange} />
@@ -91,7 +91,7 @@ class Home extends Component {
                         <div> TODO: Insert user list here </div>
 
                         <br />
-                        <button onClick={this.handleSubmit}> Create </button>
+                        <input type="submit" onSubmit={this.handleSubmit} />
                     </form>
                 </div>
             </>
