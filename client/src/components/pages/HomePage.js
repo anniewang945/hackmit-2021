@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import NavBar from "../modules/NavBar.js";
 import GoogleLogin, { GoogleLogout } from "react-google-login";
+
+import NavBar from "../modules/NavBar.js";
+import Schedule from "../modules/Schedule.js";
 
 import "../../utilities.css";
 import "./Skeleton.css";
@@ -21,6 +23,9 @@ class HomePage extends Component {
       <>
         <section>
           <NavBar />
+        </section>
+        <section>
+          <Schedule />
         </section>
         <div>Lots to do here!</div>
         <div>
