@@ -58,7 +58,11 @@ class App extends Component {
             handleLogout={this.handleLogout}
             userId={this.state.userId}
           />
-          <HomePage path="/" userId={this.state.userId} />
+          <HomePage 
+            path="/" userId={this.state.userId}
+            handleLogin={this.handleLogin}
+            handleLogout={this.handleLogout}
+          />
           <FeedPage path="/feed" userId={this.state.userID} />
           <MailPage path="/mail" userId={this.state.userID} />
           <SchedulePage path="/schedule" userId={this.state.userID} />
