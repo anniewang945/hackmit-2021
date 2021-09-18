@@ -12,3 +12,9 @@
     font-weight: bold;
     margin: 8px 0px 4px 0px
 }
+
+.CreateWorkout-input {
+    font-size: var(--m);
+    font-weight: bold;
+    margin: 8px 0px 4px 0px
+}
