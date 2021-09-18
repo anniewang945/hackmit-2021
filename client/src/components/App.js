@@ -3,6 +3,9 @@ import { Router } from "@reach/router";
 import NotFound from "./pages/NotFound.js";
 import Skeleton from "./pages/Skeleton.js";
 import HomePage from "./pages/HomePage.js";
+import FeedPage from "./pages/FeedPage.js";
+import MailPage from "./pages/MailPage.js";
+import SchedulePage from "./pages/SchedulePage.js";
 
 import "../utilities.css";
 
@@ -48,7 +51,6 @@ class App extends Component {
   render() {
     return (
       <>
-        <div>Hello!</div>
         <Router>
           <Skeleton
             path="/a"
@@ -57,6 +59,9 @@ class App extends Component {
             userId={this.state.userId}
           />
           <HomePage path="/" userId={this.state.userId} />
+          <FeedPage path="/feed" userId={this.state.userID} />
+          <MailPage path="/mail" userId={this.state.userID} />
+          <SchedulePage path="/schedule" userId={this.state.userID} />
           <NotFound default />
         </Router>
       </>

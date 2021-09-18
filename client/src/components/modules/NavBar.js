@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "@reach/router";
 
 import "./NavBar.css";
 
@@ -15,9 +16,26 @@ class NavBar extends Component {
     return (
       <nav className="NavBar-background">
         <div className="NavBar-title">Login</div>
-        <div className="NavBar-title">Feed</div>
-        <div className="NavBar-title">Mailbox</div>
-        <div className="NavBar-title">Schedule</div>
+        <div className="NavBar-title">
+          <Link to="/" className="NavBar-links">
+            Home
+          </Link>
+        </div>
+        <div className="NavBar-title">
+          <Link to="/feed" className="NavBar-links">
+            Feed
+          </Link>
+        </div>
+        <div className="NavBar-title">
+          <Link to="/mail" className="NavBar-links">
+            Mailbox
+          </Link>
+        </div>
+        <div className="NavBar-title">
+          <Link to="/schedule" className="NavBar-links">
+            Schedule
+          </Link>
+        </div>
       </nav>
     );
   }
