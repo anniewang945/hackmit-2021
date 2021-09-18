@@ -3,6 +3,7 @@ import GoogleLogin, { GoogleLogout } from "react-google-login";
 
 import NavBar from "../modules/NavBar.js";
 import Schedule from "../modules/Schedule.js";
+import Event from "../modules/Event.js";
 
 import "../../utilities.css";
 import "./Skeleton.css";
@@ -23,6 +24,11 @@ class HomePage extends Component {
       <>
         <section>
           <NavBar />
+        </section>
+        <section>
+          <Event name="Running" date="Sep. 18" time="12:00 PM" with="Feina" />
+          <Event name="Swimming" date="Sep. 19" time="1:00 AM" with="Eliz" />
+          <Event name="Cycling" date="Sep. 19" time="3:00 AM" with="Myself" />
         </section>
         <section>
           <Schedule />
