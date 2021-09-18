@@ -1,19 +1,19 @@
-.CreateWorkout-container {
+.CreateWorkoutPage-container {
     margin: 16px 8px 8px 8px;
 }
 
-.CreateWorkout-title {
+.CreateWorkoutPage-title {
     font-size: var(--l);
     font-weight: bold;
 }
 
-.CreateWorkout-label {
+.CreateWorkoutPage-label {
     font-size: var(--m);
     font-weight: bold;
     margin: 8px 0px 4px 0px
 }
 
-.CreateWorkout-input {
+.CreateWorkoutPage-input {
     font-size: var(--m);
     font-weight: bold;
     margin: 8px 0px 4px 0px
