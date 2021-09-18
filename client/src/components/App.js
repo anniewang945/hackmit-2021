@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Router } from "@reach/router";
 import NotFound from "./pages/NotFound.js";
 import Skeleton from "./pages/Skeleton.js";
+import HomePage from "./pages/HomePage.js";
 
 import "../utilities.css";
 
@@ -47,13 +48,15 @@ class App extends Component {
   render() {
     return (
       <>
+        <div>Hello!</div>
         <Router>
           <Skeleton
-            path="/"
+            path="/a"
             handleLogin={this.handleLogin}
             handleLogout={this.handleLogout}
             userId={this.state.userId}
           />
+          <HomePage path="/" userId={this.state.userId} />
           <NotFound default />
         </Router>
       </>
