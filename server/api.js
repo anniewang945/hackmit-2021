@@ -63,12 +63,13 @@ router.post("/workout", (req, res) => {
     workoutType: req.body.workoutType,
     location: req.body.location,
   });
+  console.log(req);
   newWorkout.save().then((workout) => res.send(workout));
 });
 
 // get a single workout by title
 router.get("/singleWorkout", (req, res) => {
-  Workout.find({ title: req.query.title }).then((workout) => res.send(workout));
+  Workout.findOne({ title: req.query.title }).then((workout) => res.send(workout));
 });
 
 // get all workouts of a user

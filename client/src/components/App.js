@@ -7,6 +7,7 @@ import FeedPage from "./pages/FeedPage.js";
 import MailPage from "./pages/MailPage.js";
 import SchedulePage from "./pages/SchedulePage.js";
 import CreateWorkoutPage from "./pages/CreateWorkoutPage.js"
+import WorkoutPage from "./pages/WorkoutPage.js"
 
 import "../utilities.css";
 
@@ -73,6 +74,7 @@ class App extends Component {
           <MailPage path="/mail" userId={this.state.userID} />
           <SchedulePage path="/schedule" userId={this.state.userID} />
           <CreateWorkoutPage path="/create-workout" userId={this.state.userId} allUsers={this.state.allUsers} />
+          <WorkoutPage path="/workout" userId={this.state.userId} workout="Runz for Funz"/>
           <NotFound default />
         </Router>
       </>
