@@ -2,7 +2,6 @@ import React, { Component, useState } from "react";
 import NavBar from "../modules/NavBar.js";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import {Redirect} from 'react-router-dom';
 
 import { get, post } from "../../utilities";
 
@@ -86,11 +85,12 @@ class Home extends Component {
                         <input type="text" name="location" onChange={this.handleLocationChange} />
 
                         <div className="CreateWorkoutPage-label"> People to Invite: </div>
-                        {/* TODO: add all users here */}
-                        <div> TODO: Insert user list here </div>
-
+                        {this.props.allUsers.map(user => (
+                            <div key={`allUsers${user._id}`}> {user.name} </div>
+                        ))}
+                        
                         <br />
-                        <input type="submit"/>
+                        <input type="submit" />
                     </form>
                 </div>
             </>

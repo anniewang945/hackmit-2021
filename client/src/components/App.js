@@ -23,6 +23,7 @@ class App extends Component {
     super(props);
     this.state = {
       userId: undefined,
+      allUsers: [],
     };
   }
 
@@ -32,7 +33,11 @@ class App extends Component {
         // they are registed in the database, and currently logged in.
         this.setState({ userId: user._id });
       }
-    });
+    }).then(
+      get("/api/allUsers").then((users) => {
+        this.setState({ allUsers: users.filter(user => user._id != this.state.userId) });
+      })
+    );
   }
 
   handleLogin = (res) => {
@@ -67,7 +72,7 @@ class App extends Component {
           <FeedPage path="/feed" userId={this.state.userID} />
           <MailPage path="/mail" userId={this.state.userID} />
           <SchedulePage path="/schedule" userId={this.state.userID} />
-          <CreateWorkoutPage path="/create-workout" userId={this.state.userId} />
+          <CreateWorkoutPage path="/create-workout" userId={this.state.userId} allUsers={this.state.allUsers} />
           <NotFound default />
         </Router>
       </>

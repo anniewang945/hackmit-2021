@@ -36,6 +36,11 @@ class NavBar extends Component {
             Schedule
           </Link>
         </div>
+        <div className="NavBar-title">
+          <Link to="/create-workout" className="NavBar-links">
+            Plan
+          </Link>
+        </div>
       </nav>
     );
   }
