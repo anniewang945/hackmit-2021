@@ -11,4 +11,4 @@ const WorkoutSchema = new mongoose.Schema({
   location: String,
 });
 
-module.exports = mongoose.model("user", WorkoutSchema);
+module.exports = mongoose.model("workout", WorkoutSchema);

@@ -6,4 +6,4 @@ const InviteSchema = new mongoose.Schema({
   workout: Object, // if this doesn't work change to string
 });
 
-module.exports = mongoose.model("user", InviteSchema);
+module.exports = mongoose.model("invite", InviteSchema);
