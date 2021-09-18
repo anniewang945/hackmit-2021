@@ -27,7 +27,6 @@ class HomePage extends Component {
         <section>
           <Schedule />
         </section>
-        <div>Lots to do here!</div>
         <div>
           {this.props.userId ? (
             <GoogleLogout
