@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "@reach/router";
 
 import Paper from "@material-ui/core/Paper";
 import { Scheduler, WeekView, Appointments } from "@devexpress/dx-react-scheduler-material-ui";
@@ -19,7 +18,7 @@ class Schedule extends Component {
 
   render() {
     return (
-      <Paper>
+      <Paper className="Schedule-general">
         <Scheduler data={appointments} height={660}>
           <WeekView startDayHour={9} endDayHour={19} />
           <Appointments />
