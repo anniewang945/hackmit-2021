@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage.js";
 import FeedPage from "./pages/FeedPage.js";
 import MailPage from "./pages/MailPage.js";
 import SchedulePage from "./pages/SchedulePage.js";
+import CreateWorkoutPage from "./pages/CreateWorkoutPage.js"
 
 import "../utilities.css";
 
@@ -62,6 +63,7 @@ class App extends Component {
           <FeedPage path="/feed" userId={this.state.userID} />
           <MailPage path="/mail" userId={this.state.userID} />
           <SchedulePage path="/schedule" userId={this.state.userID} />
+          <CreateWorkoutPage path="/create-workout" userId={this.state.userID} />
           <NotFound default />
         </Router>
       </>

@@ -22,6 +22,7 @@ class SchedulePage extends Component {
           <NavBar />
         </section>
         <div>this is the schedule</div>
+        <Link to={"/create-workout"}> Create a Workout </Link> 
       </>
     );
   }
