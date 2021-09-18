@@ -1,0 +1,20 @@
+.CreateWorkoutPage-container {
+    margin: 16px 8px 8px 8px;
+}
+
+.CreateWorkoutPage-title {
+    font-size: var(--l);
+    font-weight: bold;
+}
+
+.CreateWorkoutPage-label {
+    font-size: var(--m);
+    font-weight: bold;
+    margin: 8px 0px 4px 0px
+}
+
+.CreateWorkoutPage-input {
+    font-size: var(--m);
+    font-weight: bold;
+    margin: 8px 0px 4px 0px
+}
