@@ -1,5 +1,5 @@
 .NavBar-background {
-  position: absolute;
+  position: relative;
   left: 0px;
   top: 0px;
   background-color: var(--primary--dim);
@@ -16,4 +16,10 @@
   font-size: 29px;
   margin-left: 20px;
   margin-right: 20px;
+}
+
+.NavBar-links,
+.NavBar-links:visited {
+  color: var(--weblabblack);
+  text-decoration: none;
 }
