@@ -2,6 +2,7 @@ import React, { Component, useState } from "react";
 import NavBar from "../modules/NavBar.js";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import {Redirect} from 'react-router-dom';
 
 import { get, post } from "../../utilities";
 
@@ -46,18 +47,16 @@ class WorkoutForm extends Component {
     }
 
     handleSubmit = (event) => {
-        // TODO: post workout, route to schedule page, remove console log
-        event.preventDefault();
-        post("api/workout", {creator: "TO DO", 
-                            title: this.state.title, 
-                            description: this.state.description, 
-                            people: this.state.people,
-                            time: this.state.time.toDateString(),
-                            duration: this.state.duration,
-                            workoutType: this.state.type,
-                            location: this.state.location
+        post("api/workout", {
+            creator: "TO DO",
+            title: this.state.title,
+            description: this.state.description,
+            people: this.state.people,
+            time: this.state.time.toDateString(),
+            duration: this.state.duration,
+            workoutType: this.state.type,
+            location: this.state.location
         });
-        console.log(this.state);
     }
 
     render() {
@@ -67,9 +66,9 @@ class WorkoutForm extends Component {
                 <div className="CreateWorkoutPage-container">
                     <div className="CreateWorkoutPage-title"> Create A Workout </div>
                     <br />
-                    <form>
+                    <form onSubmit={this.handleSubmit}>
                         <div className="CreateWorkoutPage-label"> Title*: </div>
-                        <input type="text" name="name" onChange={this.handleTitleChange} required />
+                        <input type="text" name="title" onChange={this.handleTitleChange} required />
 
                         <div className="CreateWorkoutPage-label"> Description: </div>
                         <textarea name="description" onChange={this.handleDescriptionChange} />
@@ -91,7 +90,7 @@ class WorkoutForm extends Component {
                         <div> TODO: Insert user list here </div>
 
                         <br />
-                        <input type="submit" onSubmit={this.handleSubmit} />
+                        <input type="submit"/>
                     </form>
                 </div>
             </>
