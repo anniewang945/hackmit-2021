@@ -3,6 +3,8 @@ import NavBar from "../modules/NavBar.js";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
+import { get, post } from "../../utilities";
+
 import "./CreateWorkoutPage.css";
 
 class Home extends Component {
@@ -46,6 +48,15 @@ class Home extends Component {
     handleSubmit = (event) => {
         // TODO: post workout, route to schedule page, remove console log
         event.preventDefault();
+        post("api/workout", {creator: "TO DO", 
+                            title: this.state.title, 
+                            description: this.state.description, 
+                            people: this.state.people,
+                            time: this.state.time.toDateString(),
+                            duration: this.state.duration,
+                            workoutType: this.state.workoutType,
+                            location: this.state.location
+        });
         console.log(this.state);
     }
 
