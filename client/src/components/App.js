@@ -67,7 +67,7 @@ class App extends Component {
           <FeedPage path="/feed" userId={this.state.userID} />
           <MailPage path="/mail" userId={this.state.userID} />
           <SchedulePage path="/schedule" userId={this.state.userID} />
-          <CreateWorkoutPage path="/create-workout" userId={this.state.userID} />
+          <CreateWorkoutPage path="/create-workout" userId={this.state.userId} />
           <NotFound default />
         </Router>
       </>
